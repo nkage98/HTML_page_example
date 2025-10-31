@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Lucas Nakamura" />
+        <meta
+            name="description"
+            content="Pagina exemplo sobre HTML usando elementos semanticos"
+        />
+        <title>Semantic HTML Site Example</title>
+        <link rel="icon" href="img/nyan.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+        <span id="top"></span>
+        <header class="navbar">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="semanticHTML.html">
+                            <img
+                                src="img/nyannogif.png"
+                                alt="Site Logo"
+                                title="Site Logo"
+                                width="92"
+                                height="36.45"
+                                onmouseover="this.src='img/nyangif.gif'"
+                                onmouseout="this.src='img/nyannogif.png'"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="sobre.html">Sobre</a>
+                    </li>
+                    <li>
+                        <a href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="layout">
+            <aside class="sidebar" id="sidebar">
+                <nav>
+                    <h3 class="article-navbar-title">Navegue aqui</h3>
+                    <ul>
+                        <li>
+                            <a href="#top">Home</a>
+                        </li>
+                        <li>
+                            <a href="#html">Sobre HTML</a>
+                        </li>
+                        <li>
+                            <a href="#cronograma">Cronograma</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main>
+                <section class="page-container">
+                    <article class="" id="html">
+                        <section>
+                            <h1>HTML SEMÂNTICO</h1>
+                            <h3>Este é um exemplo de página HTML semântica</h3>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;O objetivo desta página
+                                é demonstrar o uso de elementos HTML semânticos
+                                para fins de estruturação de conteúdo e
+                                acessibilidade.
+                            </p>
+                        </section>
+
+                        <section class="centralized-content" id="html5">
+                            <img
+                                src="img/html5logo200x267.png"
+                                alt="HTML5 Logo"
+                                title="Logo do HTML5"
+                                width="200"
+                                height="267"
+                            />
+                            <figure>
+                                <figcaption>
+                                    <code>&lt;Logo do HTML5&gt;</code>
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section>
+                            <h3>Benefícios do HTML Semântico</h3>
+                            <ul>
+                                <li>Melhora a acessibilidade</li>
+                                <li>Facilita a manutenção do código</li>
+                                <li>Melhora o SEO</li>
+                                <li>
+                                    Proporciona uma melhor experiência ao
+                                    usuário
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section class="centralized-content">
+                            <img
+                                src="img/semantichtml300x288.png"
+                                alt="Estrutura de um HTML semantico"
+                                title="Logo do HTML5"
+                                width="300"
+                                height="288"
+                            />
+                            <figure>
+                                <figcaption>
+                                    <code>&lt;Logo do HTML5&gt;</code>
+                                </figcaption>
+                            </figure>
+                        </section>
+
+                        <section>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;O objetivo é dar
+                                significado ao código utilizando os elementos
+                                disponíveis no HTML. Outras funções do HTML como
+                                os atributos possuem várias funções úteis. Dessa
+                                forma, o uso excessivo de
+                                <code>&lt;div&gt;</code>s estraga a semantica do
+                                código.
+                            </p>
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp;Outra forma de organizar
+                                o HTML é utilizando comentários ou id's com bons
+                                nomes. Dessa forma mesmo com
+                                <code>&lt;div&gt;</code>s tudo fica mais claro.
+                            </p>
+                        </section>
+                    </article>
+                    <article>
+                        <section class="table-centralized" id="cronograma">
+                            <h2>Meu Cronograma de Estudos</h2>
+                            <table>
+                                <caption>
+                                    Cronograma Diário
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th>Hora</th>
+                                        <th>Atividade</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <time datetime="08:00">08:00</time>
+                                            -
+                                            <time datetime="10:00">10:00</time>
+                                        </td>
+                                        <td>Estudo de HTML</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <time datetime="10:00">10:00</time>
+                                            -
+                                            <time datetime="12:00">12:00</time>
+                                        </td>
+                                        <td>Estudo de CSS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <time datetime="14:00">14:00</time>
+                                            -
+                                            <time datetime="16:00">16:00</time>
+                                        </td>
+                                        <td>JavaScript/Python/Projeto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <time datetime="18:00">18:00</time>
+                                            -
+                                            <time datetime="19:00">19:00</time>
+                                        </td>
+                                        <td>React/Projeto</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2">
+                                            Isto durante os dias da semana
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </section>
+                        <aside>
+                            <details>
+                                <summary>
+                                    O que fazer durante os fins de semana?
+                                </summary>
+                                <p>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Tudo o que estiver
+                                    com vontade, o segredo é não pensar muito.
+                                </p>
+                            </details>
+                        </aside>
+                    </article>
+                </section>
+                <!-- End of page-container -->
+            </main>
+        </div>
+
+        <footer>
+            <hr />
+            <p>&copy; NK</p>
+            <p><a href="#top">Back to Top</a></p>
+        </footer>
+    </body>
+</html>
