@@ -1,12 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-html,
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-color: #a468bb;
+    background-color: #55356e;
+    background-image: url(./img/nyangif.gif);
+    background-size: 10% auto;
+    background-repeat: repeat-y;
     font-family: "Noto Sans", sans-serif;
     height: 100%;
 }
@@ -14,28 +21,135 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 .navbar {
-    display: block;
     position: fixed;
     top: 0;
-    width: 100dvw;
+    background-color: #55356e;
+    width: 100%;
+    height: 70px;
+    padding: 1rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar ul {
     display: flex;
-    list-style: none;
-    flex-direction: row;
     align-items: center;
+    list-style: none;
+    margin-left: 3rem;
     gap: 2rem;
-    background-color: #0f4d8f;
-    margin: 0;
-    padding: 0.7rem 0 0.7rem 10rem;
 }
 
+.navbar a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: 600;
+    padding: auto;
+    margin: auto;
+}
+
+.navbar a:hover {
+    color: #a5abbd;
+    transition: 0.3s;
+}
+
+.navbar img {
+    width: 92px;
+    height: 36.45px;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    max-width: 90dvw;
+    margin: 5.5rem auto 1rem auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+    background-color: #434343;
+    padding: 2rem 1rem 2rem 1.5rem;
+    min-width: 10rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.sidebar li,
+nav {
+    white-space: nowrap;
+    list-style: none;
+    padding-bottom: 0.7rem;
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sidebar a:visited {
+    color: #fff;
+}
+
+.sidebar a:hover {
+    color: #a5abbd;
+    transition: 0.3s;
+}
+
+.content-container {
+    background-color: #e9e2f3;
+    padding: 2rem 1rem 2rem 3rem;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #434343;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #a5abbd;
+    transition: 0.3s;
+}
+
+/* About and Contact Page Styles */
+
+.simple-page-container {
+    max-width: 90dvw;
+    margin: 5.5rem auto 1rem auto;
+    background-color: #e9e2f3;
+    padding: 2rem 1rem 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #a5abbd;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/*
 .navbar li {
     margin: 0;
     padding: 0;
@@ -57,7 +171,6 @@ nav a:hover {
     flex-direction: row;
     justify-content: center;
     margin-top: 4.5rem;
-    gap: 5rem;
 }
 
 main {
@@ -79,11 +192,12 @@ main {
     background-color: #f6f9ff;
     padding: 2rem 4rem 2rem 4rem;
     border-radius: 10px;
-    max-width: 50vw;
+    max-width: 100vw;
 }
 
 .sidebar {
     min-width: 10rem;
+    min-height: 100%;
     margin-top: 0;
     padding: 1rem;
     top: 5rem;
@@ -111,10 +225,15 @@ main {
 }
 
 footer {
-    position: relative;
+    bottom: 0;
+    margin-top: 1rem;
     text-align: center;
-    flex-shrink: 0;
     font-weight: 600;
+    color: #ffffff;
+    background-color: #0f4d8f;
+    background-image: linear-gradient(#1562b4, #000000);
+    border-top: #000 1px solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 footer a {
@@ -211,14 +330,27 @@ textarea {
     max-width: fit-content;
 }
 
-button {
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+
+
+/* Extra small devices (phones, 600px and down) */
+/* @media only screen and (max-width: 600px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .main {
+        margin-top: 0;
+        max-width: 100dvw;
+        margin: auto;
+    }
+
+    .body {
+        margin: 1rem;
+    }
 }
 
-button:hover {
-    background-color: #0f4d8f;
-    color: #ffffff;
-    transition: 0.3s;
-    cursor: pointer;
-}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {
+}  */
