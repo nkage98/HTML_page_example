@@ -31,6 +31,9 @@
                         </a>
                     </li>
                     <li>
+                        <a href="semanticHTML.html">Início</a>
+                    </li>
+                    <li>
                         <a href="sobre.html">Sobre</a>
                     </li>
                     <li>
@@ -40,8 +43,8 @@
             </nav>
         </header>
 
-        <main class="simple-page-container">
-            <article class="about-page" id="contato">
+        <main class="contact-page-container">
+            <article class="contact-page" id="contato">
                 <h1>Entre em Contato</h1>
                 <section>
                     <h2>Preencha o formulário</h2>
@@ -97,6 +100,7 @@
                                 name="phone"
                                 placeholder="(11) 99999-9999"
                                 pattern="[0-9]{2}[0-9]{5}[0-9]{4}"
+                                required
                             />
                         </p>
                         <p>
@@ -108,6 +112,8 @@
                                 min="1900"
                                 max="2024"
                                 placeholder="1970"
+                                value="190"
+                                required
                             />
                         </p>
                         <p>
@@ -168,7 +174,6 @@
                                 <label for="more3years">Mais de 3 anos</label>
                             </p>
                         </fieldset>
-                        <br />
                         <fieldset>
                             <legend>Utiliza algum destes frameworks?</legend>
                             <p>
@@ -216,7 +221,6 @@
                                 <label for="spring">Spring</label>
                             </p>
                         </fieldset>
-                        <br />
                         <fieldset>
                             <legend>Deixe um Recado</legend>
                             <label for="message">Mensagem:</label>
@@ -224,14 +228,12 @@
                             <textarea
                                 name="message"
                                 id="message"
-                                cols="70"
-                                rows="10"
                                 placeholder="Sua menssagem"
                                 maxlenght="500"
                             ></textarea>
                         </fieldset>
                         <button type="submit">Enviar</button>
-                        <button type="reset">Apagar</button>
+                        <button type="reset">Limpar</button>
                     </form>
                 </section>
             </article>
