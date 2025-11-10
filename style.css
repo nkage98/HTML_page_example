@@ -7,16 +7,40 @@
 }
 
 :root {
+    /* FONT SIZE */
     --NORMAL-FS: clamp(0.8rem, 1vw, 1rem);
+    --LINE-HEIGHT: 1.5rem;
+
+    /* PAGE DIMENSION */
     --SIDEBAR-WIDTH: clamp(20rem, 25vw, 30rem);
+    --SIDEBAR-PADDING: 2rem 1.5rem 1rem 1.5rem;
     --SPOILER-IMAGE-width: min(50%, 570px);
+    --PAGE-PADDING: 2rem 1.5rem 1rem 1.5rem;
+    --BORDER-RIGHT: 0 10px 10px 0;
+    --BORDER-LEFT: 10px 0 0 10px;
+    --BORDER-TOP: 10px 10px 0 0;
+    --BORDER-BOTTOM: 0 0 10px 10px;
+
+    /* COLORS */
+    --BACKGROUND-COLOR: #55356e;
+    --PAGE-COLOR: #e9e2f3;
+    --SIDEBAR-BACKGROUND-COLOR: #434343; 
+    --NAV-FOOTER-TEXT-COLOR: whitesmoke;
+    --NAV-FOOTER-TEXT-COLOR-HOVER: #a5abbd;
+    --SHADOW-BOX: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+    /* ANIMATION */
+    --TRANSITION-TIME: 0.3s;
+
+    /* mobile */
+    --MOBILE-PAGE-PADDING: 2rem 0.5rem 0.5rem 0.5rem;
 }
 
 html,
 body {
     overflow-x: hidden;
-    scroll-behavior: smooth;
-    background-color: #55356e;
+    scroll-behavior: smooth;    
+    background-color: var(--BACKGROUND-COLOR);
     background-image: url(./img/nyangif.gif);
     background-size: 10% auto;
     background-repeat: repeat-y;
@@ -32,10 +56,10 @@ body {
 .navbar {
     position: fixed;
     top: 0;
-    background-color: #55356e;
+    background-color: var(--BACKGROUND-COLOR);
     width: 100%;
     padding: 1rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--SHADOW-BOX);
 }
 
 .navbar ul {
@@ -48,14 +72,14 @@ body {
 }
 
 .navbar a {
-    color: whitesmoke;
+    color: var(--NAV-FOOTER-TEXT-COLOR);
     text-decoration: none;
     font-weight: 600;
 }
 
 .navbar a:hover {
-    color: #a5abbd;
-    transition: 0.3s;
+    color: var(--NAV-FOOTER-TEXT-COLOR-HOVER);
+    transition: var(--TRANSITION-TIME);
 }
 
 img {
@@ -80,16 +104,14 @@ main {
     min-width: 300px;
     margin: 5.5rem auto 1rem auto;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--SHADOW-BOX);
     font-size: var(--NORMAL-FS);
 }
 
 .sidebar {
-    background-color: #434343;
-
-    padding: 2rem 1.5rem 1rem 1.5rem;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    background-color: var(--SIDEBAR-BACKGROUND-COLOR);
+    padding: var(--SIDEBAR-PADDING);
+    border-radius: var(--BORDER-LEFT);
     width: var(--SIDEBAR-WIDTH);
 }
 
@@ -103,25 +125,24 @@ main {
 }
 
 .sidebar a {
-    color: #ffffff;
+    color: var(--NAV-FOOTER-TEXT-COLOR);
     text-decoration: none;
     font-weight: 600;
 }
 
 .sidebar a:visited {
-    color: #fff;
+    color: var(--NAV-FOOTER-TEXT-COLOR);
 }
 
 .sidebar a:hover {
-    color: #a5abbd;
-    transition: 0.3s;
+    color: var(--NAV-FOOTER-TEXT-COLOR-HOVER);
+    transition: var(--TRANSITION-TIME);
 }
 
 .content-container {
-    background-color: #e9e2f3;
-    padding: 2rem 1rem 2rem 3rem;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    background-color: var(--PAGE-COLOR);
+    padding: var(--PAGE-PADDING);
+    border-radius: var(--BORDER-RIGHT);
 }
 
 .content-container p {
@@ -133,7 +154,7 @@ main {
 }
 
 article {
-    line-height: 1.5;
+    line-height: var(--LINE-HEIGHT);
 }
 
 figure {
@@ -173,20 +194,20 @@ details img {
 }
 footer {
     text-align: center;
-    background-color: #55356e;
-    color: #ffffff;
+    background-color: var(--BACKGROUND-COLOR);
+    color: var(--NAV-FOOTER-TEXT-COLOR);
     padding: 0.5rem;
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--SHADOW-BOX);
     font-weight: 600;
 }
 
 footer a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--NAV-FOOTER-TEXT-COLOR);
 }
 
 footer a:hover {
-    color: #a5abbd;
+    color: var(--NAV-FOOTER-TEXT-COLOR-HOVER);
     transition: 0.3s;
 }
 
@@ -201,12 +222,12 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 3rem 2rem 3rem;
-    background-color: #e9e2f3;
+    padding: var(--PAGE-PADDING);
+    background-color: var(--PAGE-COLOR);
     line-height: 1.5;
     text-align: justify;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--SHADOW-BOX);
 }
 
 .about-page h1 {
@@ -231,10 +252,10 @@ footer a:hover {
 .contact-page {
     display: flex;
     flex-direction: column;
-    background-color: #e9e2f3;
-    padding: 3rem 3rem 2rem 3rem;
+    background-color: var(--PAGE-COLOR);
+    padding: var(--PAGE-PADDING);
     border-radius: 10px;
-    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--SHADOW-BOX);
 }
 
 .contact-page h1 {
@@ -313,9 +334,8 @@ button[type="reset"]:hover {
 
 @media only screen and (max-width: 767px) {
     .main-layout {
-        margin: 5.5rem auto 1rem auto;
         border-radius: 10px;
-        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+        box-shadow: var(--SHADOW-BOX);
         font-size: var(--NORMAL-FS);
     }
 
@@ -338,12 +358,9 @@ button[type="reset"]:hover {
 
     .sidebar {
         width: 90dvw;
-        padding: 2rem 0.5rem 0.5rem 0.5rem;
+        padding: P
         min-width: 300px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-radius: var(--BORDER-TOP);
     }
 
     .sidebar ul {
@@ -356,11 +373,8 @@ button[type="reset"]:hover {
     }
 
     .content-container {
-        padding: 2rem 0.5rem 0.5rem 0.5rem;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        padding: var(--MOBILE-PAGE-PADDING);
+        border-radius: var(--BORDER-BOTTOM);
     }
 
     .html-logo img {
@@ -382,7 +396,7 @@ button[type="reset"]:hover {
     }
 
     .about-page {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: var(--MOBILE-PAGE-PADDING);
     }
 
     .about-page h1 {
@@ -400,7 +414,7 @@ button[type="reset"]:hover {
     }
 
     .contact-page {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: var(--MOBILE-PAGE-PADDING);
     }
 
     .contact-page h1 {
