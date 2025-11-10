@@ -6,8 +6,10 @@
     box-sizing: border-box;
 }
 
-:root{
-    --NORMAL-FS: clamp(1.4em, 2vh, 2.4em )
+:root {
+    --NORMAL-FS: clamp(0.8rem, 1vw, 1rem);
+    --SIDEBAR-WIDTH: clamp(20rem, 25vw, 30rem);
+    --SPOILER-IMAGE-width: min(50%, 570px);
 }
 
 html,
@@ -18,8 +20,8 @@ body {
     background-image: url(./img/nyangif.gif);
     background-size: 10% auto;
     background-repeat: repeat-y;
+    min-height: 100vh;
     font-family: "Noto Sans", sans-serif;
-    height: 100%;
 }
 
 body {
@@ -41,15 +43,14 @@ body {
     align-items: center;
     list-style: none;
     margin-left: 3rem;
-    gap: 2rem;
+    font-size: var(--NORMAL-FS);
+    gap: 1.5rem;
 }
 
 .navbar a {
     color: whitesmoke;
     text-decoration: none;
     font-weight: 600;
-    padding: auto;
-    margin: auto;
 }
 
 .navbar a:hover {
@@ -57,9 +58,13 @@ body {
     transition: 0.3s;
 }
 
+img {
+    display: block;
+}
+
 .navbar img {
     width: 92px;
-    height: 36.45px;
+    height: auto;
 }
 
 main {
@@ -71,24 +76,30 @@ main {
 .main-layout {
     display: flex;
     flex-direction: row;
-    max-width: 70dvw;
+    max-width: 70vw;
+    min-width: 300px;
     margin: 5.5rem auto 1rem auto;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+    font-size: var(--NORMAL-FS);
 }
-
 
 .sidebar {
     background-color: #434343;
-    padding: 2rem 1rem 2rem 1.5rem;
-    min-width: 13rem;
+
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: var(--SIDEBAR-WIDTH);
 }
 
-.sidebar li,
-nav {
+.sidebar ul {
     white-space: nowrap;
     list-style: none;
-    padding-bottom: 0.7rem;
+}
+
+.sidebar li {
+    padding-bottom: 1rem;
 }
 
 .sidebar a {
@@ -101,13 +112,12 @@ nav {
     color: #fff;
 }
 
-.sidebar a:hover {  
+.sidebar a:hover {
     color: #a5abbd;
     transition: 0.3s;
 }
 
 .content-container {
-    white-space: nowrap;
     background-color: #e9e2f3;
     padding: 2rem 1rem 2rem 3rem;
     border-top-right-radius: 10px;
@@ -155,6 +165,11 @@ caption {
     font-weight: bold;
     font-size: 1.2rem;
     user-select: none;
+}
+
+details img {
+    width: var(--SPOILER-IMAGE-width);
+    height: auto;
 }
 footer {
     text-align: center;
@@ -266,7 +281,7 @@ textarea {
     width: 100%;
     min-height: 5rem;
     line-break: auto;
-    overflow: hidden;
+    overflow: auto;
     overflow-wrap: break-word;
 }
 
@@ -294,16 +309,111 @@ button[type="reset"]:hover {
     cursor: pointer;
 }
 
-
 /* Extra small devices (phones, 600px and down) */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
     .main-layout {
-        flex-direction: column;
-        align-items: center;
+        margin: 5.5rem auto 1rem auto;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5);
+        font-size: var(--NORMAL-FS);
     }
 
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
 
+    .main-layout {
+        flex-direction: column;
+
+        align-items: center;
+        max-width: 90dvw;
+    }
+
+    .navbar ul {
+        margin-left: 1rem;
+    }
+
+    .sidebar {
+        width: 90dvw;
+        padding: 2rem 0.5rem 0.5rem 0.5rem;
+        min-width: 300px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .content-container {
+        padding: 2rem 0.5rem 0.5rem 0.5rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .html-logo img {
+        width: 30%;
+        height: auto;
+    }
+
+    .html-structure img {
+        width: 100%;
+    }
+
+    details img {
+        width: 15rem;
+    }
+    /* about page */
+
+    .about-page-container {
+        width: 90dvw;
+    }
+
+    .about-page {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .about-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-picture {
+        min-width: 100px;
+    }
+
+    /* contact page */
+
+    .contact-page-container {
+        width: 90dvw;
+    }
+
+    .contact-page {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .contact-page h1 {
+        font-size: 1.7rem;
+    }
+
+    .contact-page h2 {
+        font-size: 1.2rem;
+    }
+
+    form {
+        gap: 0.7rem;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
