@@ -24,7 +24,7 @@
     /* COLORS */
     --BACKGROUND-COLOR: #55356e;
     --PAGE-COLOR: #e9e2f3;
-    --SIDEBAR-BACKGROUND-COLOR: #434343; 
+    --SIDEBAR-BACKGROUND-COLOR: #434343;
     --NAV-FOOTER-TEXT-COLOR: whitesmoke;
     --NAV-FOOTER-TEXT-COLOR-HOVER: #a5abbd;
     --SHADOW-BOX: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -39,7 +39,7 @@
 html,
 body {
     overflow-x: hidden;
-    scroll-behavior: smooth;    
+    scroll-behavior: smooth;
     background-color: var(--BACKGROUND-COLOR);
     background-image: url(./img/nyangif.gif);
     background-size: 10% auto;
@@ -320,7 +320,7 @@ button[type="reset"] {
 
 button[type="submit"]:hover {
     background-color: hsl(108, 25%, 69%);
-    transition: 0.3s;
+    transition: var(--TRANSITION-TIME);
     cursor: pointer;
 }
 
@@ -358,7 +358,7 @@ button[type="reset"]:hover {
 
     .sidebar {
         width: 90dvw;
-        padding: P
+        padding: var(--SIDEBAR-PADDING);
         min-width: 300px;
         border-radius: var(--BORDER-TOP);
     }
@@ -366,8 +366,8 @@ button[type="reset"]:hover {
     .sidebar ul {
         display: flex;
         flex-direction: row;
-        gap: 1rem;
-        justify-content: space-between;
+        justify-content: center;
+        gap: min(7rem, 15vw);
         padding-left: 1rem;
         padding-right: 1rem;
     }
